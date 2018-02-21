@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FiniteStateMachine</string>
+    <string name="start_position">start_position</string>
+    <string name="lock1">lock</string>
+    <string name="lock2">lock2</string>
+    <string name="unlock1">unlock</string>
+    <string name="unlock2">unlock2</string>
+</resources>

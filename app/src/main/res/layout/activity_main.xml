@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.taras.finitestatemachine.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/rl_choice_start_pos_ID">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/rl_position_ID"
+        android:layout_below="@+id/rl_choice_start_pos_ID"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/text_action_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_position"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_buttons_ID"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rl_position_ID"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btn_lock1_ID"
+            android:text="@string/lock1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp" />
+        <Button
+            android:id="@+id/btn_lock2_ID"
+            android:text="@string/lock2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/btn_lock1_ID"
+            android:layout_alignBottom="@+id/btn_lock1_ID"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp" />
+        <Button
+            android:id="@+id/btn_unlock1_ID"
+            android:text="@string/unlock1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_lock2_ID"
+            android:layout_alignStart="@+id/btn_lock1_ID"
+            android:layout_marginTop="40dp" />
+        <Button
+            android:id="@+id/btn_unlock2_ID"
+            android:text="@string/unlock2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/btn_unlock1_ID"
+            android:layout_alignStart="@+id/btn_lock2_ID" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
