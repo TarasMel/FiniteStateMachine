@@ -6,6 +6,8 @@ public class CarState {
     private String currentState;
     private int colorBackground;
 
+    public CarState(){}
+
     public CarState(String currentState, int colorBackground) {
         this.currentState = currentState;
         this.colorBackground = colorBackground;

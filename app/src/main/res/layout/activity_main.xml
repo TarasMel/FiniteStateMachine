@@ -6,27 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.taras.finitestatemachine.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/rl_choice_start_pos_ID">
 
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/rl_position_ID"
-        android:layout_below="@+id/rl_choice_start_pos_ID"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="85dp">
+
         <TextView
             android:id="@+id/text_action_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start_position"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:background="@color/tvBackgroundR"
+            android:text="@string/start_position" />
 
     </RelativeLayout>
 
