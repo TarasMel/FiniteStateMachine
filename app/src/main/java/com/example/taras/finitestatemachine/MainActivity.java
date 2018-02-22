@@ -15,7 +15,7 @@ import com.example.taras.finitestatemachine.car.ActionUnlock2;
 import com.example.taras.finitestatemachine.car.CarState;
 
 
-//TODO проверить логику клавишь нажатия и Роболектрик
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     TextView textView;
