@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         carState.setCurrentState(res.getString(R.string.alarm_disarmed_all_unlocked));
         carState.setColorBackground(R.color.tvBackgroundR);
 
+
         textView = (TextView)findViewById(R.id.text_action_ID);
         btn_lock1 = (Button) findViewById(R.id.btn_lock1_ID);
         btn_lock2 = (Button) findViewById(R.id.btn_lock2_ID);

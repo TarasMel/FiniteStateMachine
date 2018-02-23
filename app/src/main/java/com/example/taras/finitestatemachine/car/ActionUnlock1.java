@@ -9,7 +9,7 @@ import com.example.taras.finitestatemachine.R;
 public class ActionUnlock1 implements Action {
     @Override
     public boolean check_action(CarState carState) {
-        if (carState.getCurrentState().equalsIgnoreCase("Alarm disarmed, all unlocked"));
+        if (carState.getCurrentState().equalsIgnoreCase("Alarm disarmed, all unlocked")) return true;
         return false;
     }
 

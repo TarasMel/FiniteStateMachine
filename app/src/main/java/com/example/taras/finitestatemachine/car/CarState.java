@@ -33,4 +33,23 @@ public class CarState {
     public String toString() {
         return currentState;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CarState carState = (CarState) o;
+
+        if (colorBackground != carState.colorBackground) return false;
+        return currentState.equals(carState.currentState);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = currentState.hashCode();
+        result = 31 * result + colorBackground;
+        return result;
+    }
 }
