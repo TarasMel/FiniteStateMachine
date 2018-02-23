@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_unlock2.setOnClickListener(this);
     }
 
-    public void updateUI (ActionState currentState){
+    public ActionState updateUI (ActionState currentState){
         textView.setText(getResources().getString(currentState.getResString()));
         textView.setBackgroundResource(currentState.getResColor());
+        return currentState;
     }
 
    @Override
@@ -43,20 +44,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.btn_lock1_ID:
                 if (CURRENT_STATE.getResString() != ActionState.AlarmArmed_AllLocked.getResString()) {
-                    updateUI(ActionState.AlarmDisarmed_AllLocked);
+                    CURRENT_STATE = updateUI(ActionState.AlarmDisarmed_AllLocked);
                 }
                 break;
             case R.id.btn_lock2_ID:
-                updateUI(ActionState.AlarmArmed_AllLocked);
+                CURRENT_STATE = updateUI(ActionState.AlarmArmed_AllLocked);
                 break;
             case R.id.btn_unlock1_ID:
-                if (CURRENT_STATE.getResString() != ActionState.AlarmDisarmed_AllLocked.getResString()) {
-                    updateUI(ActionState.AlarmDisarmed_DriverUnlocked);
+                if (CURRENT_STATE.getResString() != ActionState.AlarmDisarmed_AllUnlocked.getResString()) {
+                    CURRENT_STATE = updateUI(ActionState.AlarmDisarmed_DriverUnlocked);
                 }
                 break;
             case R.id.btn_unlock2_ID:
                 if (CURRENT_STATE.getResString() != ActionState.AlarmDisarmed_DriverUnlocked.getResString()){
-                    updateUI(ActionState.AlarmDisarmed_AllUnlocked);
+                    CURRENT_STATE = updateUI(ActionState.AlarmDisarmed_AllUnlocked);
                 }
                 break;
         }
