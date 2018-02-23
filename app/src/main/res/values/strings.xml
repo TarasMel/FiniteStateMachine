@@ -6,12 +6,10 @@
     <string name="unlock1">unlock</string>
     <string name="unlock2">unlock2</string>
 
-
-
     <!-- Using like Data-->
-
-    <string name="alarm_disarmed_all_unlocked">Alarm disarmed, all unlocked</string>
-    <string name="alarm_disarmed_driver_unlocked">Alarm disarmed, driver unlocked</string>
-    <string name="alarm_disarmed_all_locked">Alarm disarmed, all locked</string>
     <string name="alarm_armed_all_locked">Alarm armed, all locked</string>
+    <string name="alarm_disarmed_all_locked">Alarm disarmed, all locked</string>
+    <string name="alarm_disarmed_driver_unlocked">Alarm disarmed, driver unlocked</string>
+    <string name="alarm_disarmed_all_unlocked">Alarm disarmed, all unlocked</string>
+
 </resources>
