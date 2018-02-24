@@ -10,37 +10,30 @@ import android.widget.TextView;
 import com.example.taras.finitestatemachine.car.ActionState;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import butterknife.ButterKnife;
+import butterknife.BindView;
+import butterknife.OnClick;
 
-    private TextView textView;
+
+public class MainActivity extends AppCompatActivity {
+
     private final ActionState START_STATE = ActionState.AlarmDisarmed_AllUnlocked;
     private ActionState CURRENT_STATE = START_STATE;
 
+    @BindView(R.id.textView_actionTitle_ID)
+    TextView textView;
 
+    @BindView(R.id.btn_lock1_ID)
+    Button btn_lock1;
+    @BindView(R.id.btn_lock2_ID)
+    Button btn_lock2;
+    @BindView(R.id.btn_unlock1_ID)
+    Button btn_unlock1;
+    @BindView(R.id.btn_unlock2_ID)
+    Button btn_unlock2;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        textView = (TextView)findViewById(R.id.text_action_ID);
-        Button btn_lock1 = (Button) findViewById(R.id.btn_lock1_ID);
-        Button btn_lock2 = (Button) findViewById(R.id.btn_lock2_ID);
-        Button btn_unlock1 = (Button) findViewById(R.id.btn_unlock1_ID);
-        Button btn_unlock2 = (Button) findViewById(R.id.btn_unlock2_ID);
-        btn_lock1.setOnClickListener(this);
-        btn_lock2.setOnClickListener(this);
-        btn_unlock1.setOnClickListener(this);
-        btn_unlock2.setOnClickListener(this);
-    }
-
-    public ActionState updateUI (ActionState currentState){
-        textView.setText(getResources().getString(currentState.getResString()));
-        textView.setBackgroundResource(currentState.getResColor());
-        return currentState;
-    }
-
-   @Override
-    public void onClick (View view){
+    @OnClick({R.id.btn_lock1_ID, R.id.btn_lock2_ID, R.id.btn_unlock1_ID, R.id.btn_unlock2_ID})
+    void onClick (View view){
         switch (view.getId()){
             case R.id.btn_lock1_ID:
                 if (CURRENT_STATE.getResString() != ActionState.AlarmArmed_AllLocked.getResString()) {
@@ -61,6 +54,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+    }
+
+    public ActionState updateUI (ActionState currentState){
+        textView.setText(getResources().getString(currentState.getResString()));
+        textView.setBackgroundResource(currentState.getResColor());
+        return currentState;
     }
 }
 
