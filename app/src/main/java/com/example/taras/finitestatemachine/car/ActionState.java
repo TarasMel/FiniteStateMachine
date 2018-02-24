@@ -1,9 +1,14 @@
 package com.example.taras.finitestatemachine.car;
 
 
-import com.example.taras.finitestatemachine.R;
 
-public enum ActionState {
+
+
+import com.example.taras.finitestatemachine.R;
+import java.io.Serializable;
+
+
+public enum ActionState implements Serializable{
     AlarmArmed_AllLocked(R.string.alarm_armed_all_locked, R.color.tvBackgroundG),
     AlarmDisarmed_AllLocked(R.string.alarm_disarmed_all_locked, R.color.tvBackgroundR),
     AlarmDisarmed_DriverUnlocked(R.string.alarm_disarmed_driver_unlocked, R.color.tvBackgroundR),

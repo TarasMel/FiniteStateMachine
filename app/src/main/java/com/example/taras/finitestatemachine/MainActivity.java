@@ -1,6 +1,7 @@
 package com.example.taras.finitestatemachine;
 
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -59,10 +60,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+ //       setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+//        if(savedInstanceState != null){
+//            CURRENT_STATE = savedInstanceState.getSerializable("Key");
+ //       }
     }
+
+/*    @Override
+    protected void onSaveInstanceState(Bundle bundle){
+        bundle.putSerializable("Key", CURRENT_STATE);
+        super.onSaveInstanceState(bundle);
+    }*/
+
 
     public ActionState updateUI (ActionState currentState){
         textView.setText(getResources().getString(currentState.getResString()));

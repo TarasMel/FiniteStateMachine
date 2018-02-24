@@ -20,17 +20,11 @@ import static org.junit.Assert.assertEquals;
 
 public class MainActivityTest {
 
-
     private Button mButton_lock1;
     private Button mButton_lock2;
     private Button mButton_unlock1;
     private Button mButton_unlock2;
     private TextView mTextView;
-
-//    private final ActionState START_STATE = ActionState.AlarmDisarmed_AllUnlocked;
-//    private ActionState CURRENT_STATE = START_STATE;
-
-
 
     @Before
     public void setup() throws Exception{
